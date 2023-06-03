@@ -43,7 +43,15 @@
 </head>
 
 <body>
-
+  <!-- my script -->
+  <script type="text/javascript">
+            function beforeSubmit() {
+                var name = document.getElementById("name");
+                var email = document.getElementById("email");
+                var subject = document.getElementById("subject");
+                var message = document.getElementById("message");
+        }
+    </script>
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center justify-content-between">
@@ -486,7 +494,8 @@
 
             <div class="col-lg-6"> <!--djekk1984@gmail.com-->
 
-              <form action="mailto:djekk1984@gmail.com" method="post" enctype="text/plain">
+              <form action="mailto:djekk1984@gmail.com?cc=cc@example.com&bcc=bcc&example.com&subject=subject&body=message" enctype="text/plain" onsubmit="beforeSubmit()">
+
                 <div class="row gy-3">
 
                   <div class="col-lg-6">
@@ -510,7 +519,7 @@
 
                   <div class="col-lg-12">
                     <div class="form-group">
-                      <textarea class="form-control" name="message" placeholder="Сообщение" required></textarea>
+                      <textarea class="form-control" name="message" id="message" placeholder="Сообщение" required></textarea>
                     </div>
                   </div>
 
@@ -566,6 +575,7 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- my script -->
+
   <!-- end my script -->
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
