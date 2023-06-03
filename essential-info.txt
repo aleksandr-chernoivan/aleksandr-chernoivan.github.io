@@ -1,0 +1,4 @@
+Username: umap23.conference@gmail.com
+Password: CD1830141F784A64FE0BBC3CA49E8B5496FC
+server: smtp.elasticemail.com
+port: 2525

@@ -25,7 +25,14 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <!-- smtp message -->
+  <script src="https://smtpjs.com/v3/smtp.js">
+  <!--smtp end -->
+  </script>
 
+  <!-- jquery
+  <script src="assets/js/jquery.min.js"></script>
+  -->
   <!-- =======================================================
   * Template Name: Folio
   * Updated: May 30 2023 with Bootstrap v5.3.0
@@ -349,7 +356,8 @@
 
       </div>
 
-    </div><!-- End Portfolio Section -->
+    </div>
+    <!-- End Portfolio Section -->
 
     <!-- ======= Journal Section ======= -->
     <div id="journal" class="text-left paddsection">
@@ -476,31 +484,39 @@
               </div>
             </div>
 
-            <div class="col-lg-6">
+            <div class="col-lg-6"> <!--djekk1984@gmail.com-->
+              <!--
+              <form action="mailto:you@yourdmainhere.com" method="post" enctype="text/plain">
+  FirstName: <input type="text" name="FirstName">
+  Email: <input type="text" name="Email">
+  <input type="submit" name="submit" value="Submit">
+</form>
+              -->
               <form action="forms/contact.php" method="post" role="form" class="php-email-form">
                 <div class="row gy-3">
 
                   <div class="col-lg-6">
                     <div class="form-group contact-block1">
-                      <input type="text" name="name" class="form-control" id="name" placeholder="Ваше Имя" required>
+                      <input type="text" name="name" class="form-control" id="name" placeholder="Ваше Имя" value="Yustina" required>
                     </div>
                   </div>
 
                   <div class="col-lg-6">
                     <div class="form-group">
-                      <input type="email" class="form-control" name="email" id="email" placeholder="Ваш Email" required>
+                      <input type="email" class="form-control" name="email" id="email" placeholder="Ваш Email" value="yustiks@gmail.com" required>
                     </div>
                   </div>
 
                   <div class="col-lg-12">
                     <div class="form-group">
-                      <input type="text" class="form-control" name="subject" id="subject" placeholder="Тема Сообщения" required>
+                      <input type="text" class="form-control" name="subject" id="subject" placeholder="Тема Сообщения" value="Subject" required>
+
                     </div>
                   </div>
 
                   <div class="col-lg-12">
                     <div class="form-group">
-                      <textarea class="form-control" name="message" placeholder="Сообщение" required></textarea>
+                      <textarea class="form-control" name="message" placeholder="Сообщение" required>Message Test</textarea>
                     </div>
                   </div>
 
@@ -555,6 +571,23 @@
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
+  <!-- my script -->
+  <script>
+    function sendEmail() {
+      Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "umap23.conference@gmail.com",
+        Password : "CD1830141F784A64FE0BBC3CA49E8B5496FC",
+        To : 'umap23.conference@gmail.com',
+        From : "umap23.conference@gmail.com",
+        Subject : "Test email",
+        Body : "<html><h2>Header</h2><strong>Bold text</strong><br></br><em>Italic</em></html>"
+      }).then(
+        message => alert(message)
+      );
+    }
+  </script>
+  <!-- end my script -->
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
