@@ -43,14 +43,25 @@
 </head>
 
 <body>
+  <!-- email js-->
+  <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function(){
+      emailjs.init("teqK-hMiujQRaY89V");
+    })();
+  </script>
+  <!-- end email js-->
   <!-- my script -->
   <script type="text/javascript">
-            function beforeSubmit() {
-                var name = document.getElementById("name").value;
-                var email = document.getElementById("email").value;
-                var subject = document.getElementById("subject").value;
-                var message = document.getElementById("message").value;
-        }
+      function beforeSubmit() {
+          var name = document.getElementById("name").value;
+          var email = document.getElementById("email").value;
+          var subject = document.getElementById("subject").value;
+          var message = document.getElementById("message").value;
+      }
+
     </script>
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top ">
@@ -79,8 +90,8 @@
 
     <div class="container">
       <div class="hero-content">
-        <h1>Я <span style="color: rgb(63, 18, 179);" class="typed" data-typed-items="Олександр Чорноіван, Психолог, Спеціаліст По Роботі з Психосоматикою,АРТ-терапевт, ігропрактик"></span></h1>
-        <p style="color: #052c65; font-weight: bold">Психолог, Спеціаліст По Роботі з Психосоматикою,АРТ-терапевт, ігропрактик</p>
+        <h1 style="color: #052c65;">Я <span style="color:  #052c65;" class="typed" data-typed-items="Олександр Чорноіван, Психолог, Спеціаліст По Роботі з Психосоматикою,АРТ-терапевт, ігропрактик"></span></h1>
+        <p style="color: rgb(94, 27, 5); font-weight: bold">Психолог, Спеціаліст По Роботі з Психосоматикою</p>
 
         <ul class="list-unstyled list-social">
           <li><a href="https://www.facebook.com/aleksandrchernoivan"><i class="bi bi-facebook"></i></a></li>
@@ -499,8 +510,11 @@
             </div>
 
             <div class="col-lg-6"> <!--djekk1984@gmail.com-->
-
+<!--
               <form action="mailto:djekk1984@gmail.com?cc=cc@example.com&bcc=bcc&example.com&subject=subject&body=message" enctype="text/plain" onsubmit="beforeSubmit()">
+              -->
+              <form action="https://formsubmit.co/yustiks@gmail.com" method="POST">
+                <!--<button type="submit">Send</button>!-->
 
                 <div class="row gy-3">
 
